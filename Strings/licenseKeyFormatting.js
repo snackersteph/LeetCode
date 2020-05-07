@@ -42,8 +42,6 @@ var licenseKeyFormatting = function(S, K) {
   let count = 0;
   
   for (let i = S.length-1; i >= 0; i --) {
-      // console.log(character)
-      
       if (S[i] == '-') {
           continue
       }
@@ -59,7 +57,5 @@ var licenseKeyFormatting = function(S, K) {
       }
   }
   
-  console.log("finalstring", finalString)
   return finalString
-  
 };
