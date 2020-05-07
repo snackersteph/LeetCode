@@ -65,3 +65,13 @@ var threeSum = function(nums) {
   
   return results
 };
+
+// Time Complexity: 
+//   twoSumII is O(n), and we call it nn times.
+//   Sorting the array takes O(nlogn), so overall complexity is O(nlogn+n^2)
+  
+//   This is asymptotically equivalent to O(n^2)
+  
+// Space Complexity: 
+//   from O(logn) to O(n), depending on the implementation of the sorting algorithm. 
+//   For the purpose of complexity analysis, we ignore the memory required for the output.
