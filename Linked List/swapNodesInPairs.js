@@ -17,7 +17,7 @@
  */
 var swapPairs = function(head) {
   if (head == null) {
-      return null
+    return null
   }
 
   let node1 = head || null
