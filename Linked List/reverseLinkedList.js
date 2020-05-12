@@ -19,10 +19,10 @@
  * @return {ListNode}
  */
 
-// we need to save a reference to the previous node and the current node so that you can 
+// we need to save a reference to the previous node and the current node so that you can
 // set the next when you are moving forward
 
-// Iteratively 
+// Iteratively
 var reverseList = function(head) {
   let previous = ListNode(null)
   let current = head
@@ -37,7 +37,7 @@ var reverseList = function(head) {
   return previous
 };
 
-// Recursively 
+// Recursively
 // var reverseList = function(head) {
 //   const helper = (current, prev) => {
 //     if(current === null) return prev;
