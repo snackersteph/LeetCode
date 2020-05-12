@@ -24,17 +24,15 @@ var reverseString = function(s) {
 
   // one starting at the beginning
   for (i=0; i < (s.length-1)/2; i++) {
-      // one starting at the end
-      let temp = s[endPointer]
-      console.log("temp", temp)
-      console.log("s[i]", s[i])
+    // one starting at the end
+    let temp = s[endPointer]
 
-      // swap the characters at the two pointers
-      s[endPointer] = s[i]
-      s[i] = temp
+    // swap the characters at the two pointers
+    s[endPointer] = s[i]
+    s[i] = temp
 
-      // move towards the middle
-      endPointer--
+    // move towards the middle
+    endPointer--
   }
 
   // return original string
