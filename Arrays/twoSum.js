@@ -10,7 +10,7 @@ var twoSum = function(nums, target) {
   // create an object that holds the number as the key and it's index as the value
   for (i=0; i < nums.length; i++) {
     if (!library.hasOwnProperty(nums[i]))
-      library[nums[i]] = i  
+      library[nums[i]] = i
 
     var compliment = target - nums[i]
 
@@ -25,12 +25,12 @@ var twoSum = function(nums, target) {
       if (library[compliment] != i) {
         result.push(library[compliment])
         result.push(i)
-        
+
         console.log("result", result)
         return result
 
       }
-      
+
     }
   }
 

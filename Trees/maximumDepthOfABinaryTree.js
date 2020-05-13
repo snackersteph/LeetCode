@@ -31,7 +31,7 @@
  */
 var maxDepth = function(root) {
   // top down recursion
-  // base case 
+  // base case
   // if there are no children, return the max
   if (root == null) {
     return 0;
@@ -40,7 +40,7 @@ var maxDepth = function(root) {
   // if there is a left child go left
   let left = maxDepth(root.left)
 
-  // if there is a right child go right 
+  // if there is a right child go right
   let right = maxDepth(root.right)
 
   return Math.max(left, right) + 1
@@ -48,11 +48,11 @@ var maxDepth = function(root) {
 
 // Complexity analysis
 
-// Time complexity : we visit each node exactly once, thus the time complexity is {O}(N), 
+// Time complexity : we visit each node exactly once, thus the time complexity is {O}(N),
 // where N is the number of nodes.
 
-// Space complexity : in the worst case, the tree is completely unbalanced, e.g. each node 
-// has only left child node, the recursion call would occur N times (the height of the tree), 
-// therefore the storage to keep the call stack would be {O}(N). But in the best case (the tree 
-// is completely balanced), the height of the tree would be \log(N)log(N). Therefore, the 
+// Space complexity : in the worst case, the tree is completely unbalanced, e.g. each node
+// has only left child node, the recursion call would occur N times (the height of the tree),
+// therefore the storage to keep the call stack would be {O}(N). But in the best case (the tree
+// is completely balanced), the height of the tree would be \log(N)log(N). Therefore, the
 // space complexity in this case would be O(log(N)).
