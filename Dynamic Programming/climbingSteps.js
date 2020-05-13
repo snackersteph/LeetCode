@@ -32,22 +32,20 @@
 // if we take one step 6 -> 5
 // if we take two steps 6 -> 4
 // we have already solved the number of ways for 5 and 4 steps
-// so the total number for 6 steps is 
+// so the total number for 6 steps is
 // total of 4 steps + total of 5 steps
-
 
 var climbStairs = function(n) {
    let results = []
-   
+
    // our 2 base cases
    results[0] = 1
    results[1] = 1
-   
-   
+
    for(var i=2; i <= n; i ++) {
        results[i] = results[i-1] + results[i-2]
    }
-   
+
    return results[n]
 };
 
