@@ -29,6 +29,8 @@ var countPrimes = function(n) {
   }
 
   let primeCount = 0
+
+  // we skip 0 and 1 to start at primes[2]
   for (let i=2; i < primes.length; i++) {
     if (primes[i]) {
       primeCount++
