@@ -1,4 +1,4 @@
-// Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that 
+// Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that
 // adding up all the values along the path equals the given sum.
 
 // Note: A leaf is a node with no children.
@@ -31,12 +31,14 @@
 
 // its better to use recursion for tree problems
 var hasPathSum = function(root, sum) {
-  if (root == null) return false
-  
-  // base case when there are no more leaf nodes 
-  if (root.left == null && root.right == null && sum-root.val == 0) {
-      return true
-  } else {
-      return hasPathSum(root.left, sum-root.val) || hasPathSum(root.right, sum-root.val)
+  if (root == null) {
+    return false
   }
-}
+
+  if (!root.right && !root.left && root.val == sum) {
+    return true
+  } else {
+    let newValue = sum - root.val
+    return hasPathSum(root.right, newValue) || hasPathSum(root.left, newValue)
+  }
+};
