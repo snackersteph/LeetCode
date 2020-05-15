@@ -6,7 +6,7 @@
 // Both the left and right subtrees must also be binary search trees.
 
 // Duplicates are not accepted
- 
+
 // Example 1:
 //     2
 //    / \
@@ -39,21 +39,21 @@
  * @return {boolean}
  */
 var isValidBST = function(root) {
-  // we want to use in order traversal 
+  // we want to use in order traversal
 
-  // were going to use a stack 
+  // were going to use a stack
   let nodeStack = []
   let previous = -Infinity
   let current = root
 
   while (current || nodeStack.length) {
-    // go all the way down to the left side of the tree 
+    // go all the way down to the left side of the tree
     while (current) {
-      // pushing values onto a stack 
+      // pushing values onto a stack
       nodeStack.push(current)
       current = current.left
     }
-    
+
     // after the stack has been filled, we will see if they are in order
     current = nodeStack.pop()
 
@@ -84,14 +84,14 @@ var isValidBST = function(root) {
 //       if (!root) {
 //           return true; // We hit the end of the path
 //       }
-      
+
 //       if ((min !== null && root.val <= min) || (max !== null && root.val >= max)) {
 //           return false; // current node's val doesn't satisfy the BST rules
 //       }
-      
+
 //       // Continue to scan left and right
 //       return helper(root.left, min, root.val) && helper(root.right, root.val, max);
 //   }
-  
+
 //   return helper(root, null, null);
 // };
